@@ -10,6 +10,7 @@ import java.net.NetworkInterface;
 import java.util.Date;
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.border.TitledBorder;
 
 import firewall.BlockPort;
 import firewall.UNBlock;
@@ -84,10 +85,12 @@ public class Capture_GUI {
 	   MainWindow.setLocation(200,200);
 	   MainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 	   MainWindow.getContentPane().setLayout(null);
+	   MainWindow.getContentPane().setBackground(new Color(51,51,51));
 	   
 	   labelPacketCaptured = new JLabel("Packet Captured");
 	   MainWindow.getContentPane().add(labelPacketCaptured);
 	   labelPacketCaptured.setBounds(10, 0, 100,20);
+	   labelPacketCaptured.setForeground(Color.GREEN);
 
 	   TA_OUTPUT.setEditable(false);
 	   TA_OUTPUT.setFont(new Font("Monospaced", 0, 12));
@@ -96,6 +99,7 @@ public class Capture_GUI {
 	   SP_OUTPUT.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 	   SP_OUTPUT.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 	   SP_OUTPUT.setViewportView(TA_OUTPUT);
+	   SP_OUTPUT.getViewport().setBackground(Color.GREEN);
 
 	   MainWindow.getContentPane().add(SP_OUTPUT);
 	   SP_OUTPUT.setBounds(10, 20, 500,285);
@@ -103,6 +107,7 @@ public class Capture_GUI {
 	   labelPortOpen = new JLabel("Port Open");
 	   MainWindow.getContentPane().add(labelPortOpen);
 	   labelPortOpen.setBounds(515, 0, 100,20);
+	   labelPortOpen.setForeground(Color.GREEN);
 	   
 	   TA_PORT.setEditable(false);
 	   TA_PORT.setFont(new Font("Monospaced", 0, 12));
@@ -117,8 +122,8 @@ public class Capture_GUI {
 
 
 
-	   B_CAPTURE.setBackground(new Color(255, 0, 0));
-	   B_CAPTURE.setForeground(new Color(255, 255, 255));
+	   B_CAPTURE.setBackground(new Color(102, 102, 102));
+	   B_CAPTURE.setForeground(Color.GREEN);
 	   B_CAPTURE.setMargin(new Insets(0, 0, 0, 0));
 	   B_CAPTURE.addActionListener(new ActionListener()
 	   {
@@ -131,8 +136,8 @@ public class Capture_GUI {
 	   MainWindow.getContentPane().add(B_CAPTURE);
 	   B_CAPTURE.setBounds(10, 310, 150, 25);
 
-	   B_STOP.setBackground(new Color(0, 0, 0));
-	   B_STOP.setForeground(new Color(255, 255, 255));
+	   B_STOP.setBackground(new Color(102, 102, 102));
+	   B_STOP.setForeground(Color.GREEN);
 	   B_STOP.setMargin(new Insets(0, 0, 0, 0));
 	   B_STOP.addActionListener(new ActionListener()
 	   {
@@ -145,8 +150,8 @@ public class Capture_GUI {
 	   MainWindow.getContentPane().add(B_STOP);
 	   B_STOP.setBounds(170, 310, 150, 25);
 
-	   B_SELECT.setBackground(new Color(0, 0, 0));
-	   B_SELECT.setForeground(new Color(255, 255, 255));
+	   B_SELECT.setBackground(new Color(102, 102, 102));
+	   B_SELECT.setForeground(Color.GREEN);
 	   B_SELECT.setMargin(new Insets(0, 0, 0, 0));
 	   B_SELECT.addActionListener(new ActionListener()
 	   {
@@ -160,8 +165,8 @@ public class Capture_GUI {
 	   B_SELECT.setBounds(10, 388, 150, 20);
 
 
-	   B_LIST.setBackground(new Color(0, 0, 0));
-	   B_LIST.setForeground(new Color(255,255,255));
+	   B_LIST.setBackground(new Color(102, 102, 102));
+	   B_LIST.setForeground(Color.GREEN);
 	   B_LIST.setMargin(new Insets(0, 0, 0, 0));
 	   B_LIST.addActionListener(new ActionListener()
 	   {
@@ -174,8 +179,8 @@ public class Capture_GUI {
 	   B_LIST.setBounds(10, 410, 150, 20);
 	   
 	   
-	   B_PORT.setBackground(new Color(0, 0, 0));
-	   B_PORT.setForeground(new Color(255, 255, 255));
+	   B_PORT.setBackground(new Color(102, 102, 102));
+	   B_PORT.setForeground(Color.GREEN);
 	   B_PORT.setMargin(new Insets(0, 0, 0, 0));
 	   B_PORT.addActionListener(new ActionListener()
 	   {
@@ -192,9 +197,10 @@ public class Capture_GUI {
 	   labelSaveDB = new JLabel("Save On - MongoDB");
 	   MainWindow.getContentPane().add(labelSaveDB);
 	   labelSaveDB.setBounds(200, 360, 200,20);
+	   labelSaveDB.setForeground(Color.GREEN);
 
-	   B_SAVE.setBackground(new Color(0, 0, 0));
-	   B_SAVE.setForeground(new Color(255, 255, 255));
+	   B_SAVE.setBackground(new Color(102, 102, 102));
+	   B_SAVE.setForeground(Color.GREEN);
 	   B_SAVE.setMargin(new Insets(0, 0, 0, 0));
 	   B_SAVE.addActionListener(new ActionListener()
 	   {
@@ -209,9 +215,10 @@ public class Capture_GUI {
 	   labelSaveLocal = new JLabel("Save On - Local Machine");
 	   MainWindow.getContentPane().add(labelSaveLocal);
 	   labelSaveLocal.setBounds(200, 410, 200,20);
+	   labelSaveLocal.setForeground(Color.GREEN);
 	   
-	   B_SAVELOCAL.setBackground(new Color(0, 0, 0));
-	   B_SAVELOCAL.setForeground(new Color(255, 255, 255));
+	   B_SAVELOCAL.setBackground(new Color(102, 102, 102));
+	   B_SAVELOCAL.setForeground(Color.GREEN);
 	   B_SAVELOCAL.setMargin(new Insets(0, 0, 0, 0));
 	   B_SAVELOCAL.addActionListener(new ActionListener()
 	   {
@@ -224,12 +231,13 @@ public class Capture_GUI {
 	   B_SAVELOCAL.setBounds(200, 430, 150, 25);
 	   
 
-	   panelFirewall.setBorder(BorderFactory.createTitledBorder("Firewall (Create and Delete Rules)"));
+	   panelFirewall.setBorder(BorderFactory.createTitledBorder(null,"Firewall (Create and Delete Rules)",TitledBorder.LEFT, TitledBorder.TOP,null,Color.GREEN));
 	   panelFirewall.setBounds(380, 350, 370, 100);
+	   panelFirewall.setBackground(new Color(51,51,51));
 	   MainWindow.getContentPane().add(panelFirewall);
 	   
-	   B_PORTBLOCK.setBackground(new Color(0, 0, 0));
-	   B_PORTBLOCK.setForeground(new Color(255, 255, 255));
+	   B_PORTBLOCK.setBackground(new Color(102, 102, 102));
+	   B_PORTBLOCK.setForeground(Color.GREEN);
 	   B_PORTBLOCK.setMargin(new Insets(0, 0, 0, 0));
 	   B_PORTBLOCK.addActionListener(new ActionListener()
 	   {
@@ -247,17 +255,17 @@ public class Capture_GUI {
 	   TF_PortBlock.setHorizontalAlignment(SwingConstants.CENTER);
 	   panelFirewall.add(TF_PortBlock);
 	   MainWindow.getContentPane().add(TF_PortBlock);
-	   TF_PortBlock.setBounds(390, 375, 80, 25);
+	   TF_PortBlock.setBounds(550, 375, 80, 25);
 	   
 	   
 	   comboBox.setForeground(new Color(255,0,0));
 	   panelFirewall.add(comboBox);
 	   MainWindow.getContentPane().add(comboBox);
-	   comboBox.setBounds(480, 375, 150, 25);
+	   comboBox.setBounds(390, 375, 150, 25);
 	   
 	   
-	   B_PORTUNBLOCK.setBackground(new Color(0, 0, 0));
-	   B_PORTUNBLOCK.setForeground(new Color(255, 255, 255));
+	   B_PORTUNBLOCK.setBackground(new Color(102, 102, 102));
+	   B_PORTUNBLOCK.setForeground(Color.GREEN);
 	   B_PORTUNBLOCK.setMargin(new Insets(0, 0, 0, 0));
 	   B_PORTUNBLOCK.addActionListener(new ActionListener()
 	   {
@@ -274,29 +282,31 @@ public class Capture_GUI {
 	   TF_PortUNBlock.setHorizontalAlignment(SwingConstants.CENTER);
 	   panelFirewall.add(TF_PortUNBlock);
 	   MainWindow.getContentPane().add(TF_PortUNBlock);
-	   TF_PortUNBlock.setBounds(390, 415, 80, 25);
+	   TF_PortUNBlock.setBounds(550, 415, 80, 25);
 	   
 	   
 	   comboBox_UN.setForeground(new Color(255,0,0));
 	   panelFirewall.add(comboBox_UN);
 	   MainWindow.getContentPane().add(comboBox_UN);
-	   comboBox_UN.setBounds(480, 415, 150, 25);
+	   comboBox_UN.setBounds(390, 415, 150, 25);
 	   
 	   labelSelectInterface = new JLabel("Select Interface");
 	   MainWindow.getContentPane().add(labelSelectInterface);
 	   labelSelectInterface.setBounds(10, 345, 100,20);
+	   labelSelectInterface.setForeground(Color.GREEN);
 	   
 	   TF_SelectInterface.setForeground(new Color(255,0,0));
 	   TF_SelectInterface.setHorizontalAlignment(SwingConstants.CENTER);
 	   MainWindow.getContentPane().add(TF_SelectInterface);
 	   TF_SelectInterface.setBounds(10, 365, 150, 20);
 	    
-	   panelHoneyFTP.setBorder(BorderFactory.createTitledBorder("Honey FTP Server"));
+	   panelHoneyFTP.setBorder(BorderFactory.createTitledBorder(null,"Honey FTP Server",TitledBorder.LEFT, TitledBorder.TOP,null,Color.GREEN));
 	   panelHoneyFTP.setBounds(5, 470, 370, 60);
+	   panelHoneyFTP.setBackground(new Color(51,51,51));
 	   MainWindow.getContentPane().add(panelHoneyFTP);
 	    
-	    B_HONEYSTART.setBackground(new Color(0, 0, 0));
-		B_HONEYSTART.setForeground(new Color(255, 255, 255));
+	    B_HONEYSTART.setBackground(new Color(102, 102, 102));
+		B_HONEYSTART.setForeground(Color.GREEN);
 		B_HONEYSTART.setMargin(new Insets(0, 0, 0, 0));
 		B_HONEYSTART.addActionListener(new ActionListener()
 		{
@@ -314,8 +324,8 @@ public class Capture_GUI {
 		MainWindow.getContentPane().add(B_HONEYSTART);
 		B_HONEYSTART.setBounds(10, 500, 80, 25);
 		 
-		B_HONEYSTOP.setBackground(new Color(0, 0, 0));
-		B_HONEYSTOP.setForeground(new Color(255, 255, 255));
+		B_HONEYSTOP.setBackground(new Color(102, 102, 102));
+		B_HONEYSTOP.setForeground(Color.GREEN);
 		B_HONEYSTOP.setMargin(new Insets(0, 0, 0, 0));
 		B_HONEYSTOP.addActionListener(new ActionListener()
 		{
@@ -340,12 +350,13 @@ public class Capture_GUI {
 		MainWindow.getContentPane().add(L_HACKERCONNECTED);
 		L_HACKERCONNECTED.setBounds(300, 500, 80, 25);
 		
-		panelHoneyIRC.setBorder(BorderFactory.createTitledBorder("Honey IRC Server"));
+		panelHoneyIRC.setBorder(BorderFactory.createTitledBorder(null,"Honey IRC Server",TitledBorder.LEFT, TitledBorder.TOP,null,Color.GREEN));
 		panelHoneyIRC.setBounds(380, 470, 370, 60);
+		panelHoneyIRC.setBackground(new Color(51,51,51));
 		MainWindow.getContentPane().add(panelHoneyIRC);
 		
-		B_HONEYSTARTIRC.setBackground(new Color(0, 0, 0));
-		B_HONEYSTARTIRC.setForeground(new Color(255, 255, 255));
+		B_HONEYSTARTIRC.setBackground(new Color(102, 102, 102));
+		B_HONEYSTARTIRC.setForeground(Color.GREEN);
 		B_HONEYSTARTIRC.setMargin(new Insets(0, 0, 0, 0));
 		B_HONEYSTARTIRC.addActionListener(new ActionListener()
 		{
@@ -363,8 +374,8 @@ public class Capture_GUI {
 		MainWindow.getContentPane().add(B_HONEYSTARTIRC);
 		B_HONEYSTARTIRC.setBounds(390, 500, 80, 25);
 		
-		B_HONEYSTOPIRC.setBackground(new Color(0, 0, 0));
-		B_HONEYSTOPIRC.setForeground(new Color(255, 255, 255));
+		B_HONEYSTOPIRC.setBackground(new Color(102, 102, 102));
+		B_HONEYSTOPIRC.setForeground(Color.GREEN);
 		B_HONEYSTOPIRC.setMargin(new Insets(0, 0, 0, 0));
 		B_HONEYSTOPIRC.addActionListener(new ActionListener()
 		{
@@ -736,4 +747,3 @@ public class Capture_GUI {
 	}
 	
 }
-
